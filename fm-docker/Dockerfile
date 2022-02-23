@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN yum install gcc gcc-c++ libstdc++-devel cmake make gdb openssh-server rsync -y
+RUN yum install gcc gcc-c++ libstdc++-devel cmake make gdb gdb-gdbserver openssh-server rsync yum install -y
 
 RUN mkdir /var/run/sshd
 RUN sed -i "s/#UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config
