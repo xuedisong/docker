@@ -1,0 +1,12 @@
+# docker-compose run fm
+version: "3"
+
+services:
+  fm:
+    image: xuedisong/fm-repo:latest
+    container_name: fm-repo
+    ports:
+      - "45678:22"
+      - "8730:873"
+    cap_add:
+      - ALL
