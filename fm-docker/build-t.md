@@ -9,4 +9,6 @@ docker exec -it containerid /bin/bash
 ssh root@localhost -p 45678
 >password: 000000
 
-/usr/lib/gcc/x86_64-redhat-linux/4.8.2/include/pmmintrin.h
+fm --flagfile=$CONF_DIR/cvr_model/params.conf --method=fma --train=$train_data_dir/train.dat --test=$train_data_dir/test.dat --dump=$model_dir/model.txt --dump_snapshot=$model_dir/snapshot.txt >> $model_dir/model.out 2>> $model_dir/model.err
+
+fm  --method=fma --dump=$model_dir/model.txt --dump_snapshot=$model_dir/snapshot.txt >> $model_dir/model.out 2>> $model_dir/model.err
